@@ -9,3 +9,9 @@ class Book(models.Model):
     pages = models.IntegerField(blank=True, null=True)
     cover = models.URLField(max_length=511, blank=True, null=True)
     language = models.CharField(max_length=255)
+
+    class Meta:
+        ordering = ["title", "author"]
+
+    def __str__(self):
+        return f"{self.title}({self.author})"
