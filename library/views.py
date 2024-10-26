@@ -3,6 +3,7 @@ from rest_framework import viewsets
 
 from library.filters import BookFilter
 from library.models import Book
+from library.pagination import BookPagination
 from library.serializers import BookSerializer
 
 
@@ -13,3 +14,4 @@ class BookViewSet(viewsets.ModelViewSet):
         DjangoFilterBackend,
     ]
     filterset_class = BookFilter
+    pagination_class = BookPagination
