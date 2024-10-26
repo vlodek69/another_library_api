@@ -9,7 +9,8 @@ class BookSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def to_representation(self, instance):
-        """Enforce `null` if `cover` URLField is empty"""
+        """Enforce `null` if `cover` URLField is empty to achieve uniform
+        interface"""
         representation = super().to_representation(instance)
         if representation.get("cover") == "":
             representation["cover"] = None
