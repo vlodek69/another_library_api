@@ -17,7 +17,7 @@ Copy .env-sample -> .env and populate with all required data.
 
 Install requirements by running:
 ```shell
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Run migrations
@@ -29,3 +29,7 @@ To start the server simply do
 ```shell
 python manage.py runserver
 ```
+
+## How to use
+
+Access browsable API at base url
